@@ -1,31 +1,3 @@
-#	*İlk olarak aldığım arrayin boş yada tek elemanlı olma durumunu kontrol
-#ediyorum . Çünkü bu durumlarda min sub array arrayin kendisine eşit oluyor.
-#	*Daha sonra recursive helper fonksiyonumu kullanarak arrayi sürekli ikiye 
-#bölerek sol ve sağ olmak üzere iki subarray elde ediyorum . 
-#	* Sonuç olarak her defasında 3 minimum subarray elde etmiş oluyorum . Sol
-#kısımdan gelen sağ kısımdan gelen ve sol-sağ her iki taraftanda eleman
-#bulunduran bir min sub array . 
-#	*Minimum subarray bulma işlemini minimumSubArray fonksiyonum gerçekleştiriyor.
-#	*Bu fonksiyonumdada minimumu aradığım için başlangıçta minimum değerleri 
-#tutacağım değişkenlerimi 99999999999 gibi büyük bir integer değere eşitliyorum.
-#Ve tüm listeyi sırasıyla gezip her defasında tem bir min sub array bulup içlerinden
-#minimum olanı tuttuğum başlangıç ve bitiş indexleriyle return ediyorum.
-#	*Recursive fonksiyonumun sonucunda toplamı minimum olan subarrayı return
-#etmeyi bir fonksiyon return ederek buldum . return ettiğim bu fonksiyonda 
-#sonuçta elde etiğim (sol sağ orta) 3 subarrayi gönderiyorum ve bunlardan minimum
-#toplama sahip olan sonucu veriyor. Bu işlemi resultFunc fonksiyonum yapıyor
-#
-#	Worst Case Analysis
-#	-> Recursive fonksiyonumda sürekli listeleri ikiye böldüğümden dolayı;
-#	T(n)=T(n/2) + T(n/2)
-#	-> Minimum subarrayi bulan minimumSubArray fonksiyonumun karmaşıklığı
-#	n elemanlı bir liste için O(n) dir.
-#	Worst case karmaşıklığı( n elemanlı bir array için);
-#
-#		T(n)=2T(n/2) + O(n)
-#		T(n)=O(nlogn) olur.
-
-
 def minimumSubArray(arr,head,tail):
     
     tempMin =  99999999999 #to check temp min array's
