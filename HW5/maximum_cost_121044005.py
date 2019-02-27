@@ -1,38 +1,3 @@
-#   Bu soruda Y listesinden X listesini ederken X listesinde mutlak değerlerin
-#   farkının toplamının maximum olması gerektiği için ;
-#   1<=X[i]<=Y[i] kuralından max elde ertmek için öncelikle X listesini  
-#   elde ederken X listesinin i. indexindeki elemanının ya Y listesinin i.
-#   indexindeki elemana eşit olması yada 1 e eşit olması gerekli.
-#   Öncelikle soruda Y listesinin uzunluğuna eşit olan bir X listesi oluşturdum.
-#   Burada X listesinin elemanlarını elde ederken 0 dan başlayarak sonuncaya
-#   doğru birdaha geri dönmemek üzere her indexteki elemanı bularak ilerlemeye
-#   çalıştım.
-#   Elemanların ne olacağına karar verip ilerlemek için her elemanda çeşitli
-#   kontroller gerçekleştirdim.
-#   Bu kontroller;
-#   -eğer listenin ilk elemanı ise kendinden sonra gelen elemanla farkı
-#   -eğer listenin son elemanı ise kendinden önce gelen elemanla farkı
-#   -ortalarda bir eleman ise kendinden önce ve sonra gelen elemanlarla 
-#   toplamlarının farkı.
-#   -ayrıca ek kontrol olarak i+1. eleman 1 olacaksa ve max toplamı küçültecekse
-#   i. elemanı 1 yapma durumunu kontrol ettim
-#   -son olarak ortalarda peş peşe 3 elemanda 1 e eşit olmuyorsa ve ortadaki
-#   elemanın 1 olma durumu max toplamı artırıyorsa ortadaki yani bulunduğum
-#   indexteki elemanın 1 e eşit olma durumunu
-#   Bütün bu kontrollerden sonra X listesini elde etmiş oluyorum ve max cost u
-#   hesaplayıp return ediyorum.
-#
-#   Worst Case Analysis
-#   find_maximum_cost fonksiyonumun içinde helper fonksiyonumu 
-#   helper fonksiyonumun içinde de checkThat1orOwn fonksiyonumu çağırıyorum
-#
-#   checkThat1orOwn= O(1) ---> sadece statementlardan oluşuyor
-#   helper fonksiyonumda ise for döngüsü  ;
-#   n elemanlı bir Y listesi girdisi için n kez dönüyor
-#   diğer for döngüsü n-1 kez dönüyor(absolute differences sum için)
-#   
-#   Time = O(n+(n-1)) = O(n)
-
 def checkThat1orOwn(arr,index):
     #elemanın 1 olup olmayacağına yada Y listesindeki elemana eşit olup
     #olmayacağına karar ver
