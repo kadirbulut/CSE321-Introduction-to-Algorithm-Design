@@ -1,26 +1,3 @@
-#	Lomuto and Hoare partition schemes
-
-#	*Hoare algoritması Lomuto algoritmasından daha verimlidir.Çünkü Hoare 
-#	ortalama olarak diğerinden 3 kat daha az swap işlemi gerçekleştirir.
-#	Bunun sebebi Hoare algoritmasının zaten sıralı olan bir arrayde swap 
-#	işlemini gerçekleştirmemesine rağmen , Lomuto algoritmasında dizi sıralıda
-#	olsa swap işleminin gerçekleşmesidir.
-#
-#	*Hoare algoritması seçtiği pivot elemana göre sağdan ve soldan çift yönlü 
-#	sıralama işlemini gerçekleştirirken , Lomuto algoritmasında sadece soldan 
-#	sıralama gerçekliştirilir. Bu durum Lomuto algoritmasının anlamasını ve 
-#	implement edilmesini kolaylaştırırken , daha yavaş çalışmasınada sebebiyet
-#	verir.
-#
-#	*Hoare ve Lomuto algoritmaları elemanların tamamı sıralı olduğunda yada tüm 
-#	elemanlar eşit olduğunda yine de her ikiside O(n^2) zaman karmaşıklığında 
-#	çalışırlar. (Worst-case)
-#
-#	*Her iki methodda n elemanlı bir dizi için n-1 karşılaştırma ile 
-#	implement edilebilir.
-#
-
-
 def quickSortHoarePartition(arr,start,finish):
     
     pivElement=arr[start]
