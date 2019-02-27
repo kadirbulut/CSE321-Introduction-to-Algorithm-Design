@@ -1,18 +1,3 @@
-#	Bu algoritmada da recursive olarak iki liste üzerinde ilerlemeye çalışıyorum.
-#	Fakat diğer algoritmada her seferinde iki listeninde middle elementlerini 
-#	karşılaştırıp birinin yarısını atarak ilerlerken ;  
-#	Bu algoritmada ; 
-#	-> Recursive kısmı k//2 defa çalıştırıyorum.
-#	-> controlM ve controlN adlı iki değişken tutarak her defasında son bulunan 
-#	elemandan itibaren controlM. yada controlN. elemanları bulup ilerleyerek 
-#	k. elemana ulaşmaya çalışıyorum.
-#	-> Her aşamada gelinen noktada m yada n de hangi noktada kalmışsam 
-#	elemanlarını karşılaştırıp alfabetik olarak ön sırada olanın solunu alarak
-#	ilerlemeye çalıştım.
-#	->Sonuç olarak diğer algoritmadan farklı olarak decrease kısmı k//2 kez
-#	gerçekleşeceğinden karmışıklığı O(logk) olacaktır.
-
-
 def helper(m,n,k):
     #if m is null kth element is in n list
     if len(m)==0:
